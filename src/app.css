@@ -1,6 +1,7 @@
 .app .header {
   position: relative;
   height: 80vh;
+  max-height: 700px;
   background-color: rgba(204, 47, 49, 0.2);
   background-size: cover;
   background-position: center;
@@ -42,4 +43,31 @@
 .app section p {
   text-align: justify;
   line-height: 1.8em;
+}
+
+@media screen and (max-width: 700px) {
+  .app .content {
+    margin: 0;
+  }
+  .app .header {
+    height: 350px;
+  }
+  .app .header h1 {
+    font-size: 40px;
+  }
+  .app .header h2 {
+    font-size: 35px;
+  }
+  .app section {
+    margin-top: 40px;
+    padding: 20px 20px 40px 20px;
+  }
+  .app section h2 {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 30px;
+  }
+  .app section p {
+    line-height: 1.5em;
+  }
 }/*# sourceMappingURL=app.css.map */
