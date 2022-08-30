@@ -1,0 +1,55 @@
+.app {
+  .header {
+    position: relative;
+    height: 80vh;
+    //background-image link is set in app.js file as inline style
+    background-color: rgba(204, 47, 49, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    width: 100%;
+
+    &__info {
+      padding-top: 120px;
+      text-transform: uppercase;
+      text-align: center;
+
+      h1 {
+        font-weight: 500;
+        font-size: 60px;
+        padding-bottom: 20px;
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: 38px;
+      }
+    }
+  }
+
+  .content {
+    margin: 0 40px;
+  }
+
+  section {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 40px 40px 60px 40px;
+    background-color: rgba(204, 47, 49, 0.5);
+
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 60px;
+      font-size: 38px;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.8em;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+footer {
+  background-color: rgb(24, 24, 24);
+  padding: 40px 0;
+  width: 100%;
+}
+
+footer img {
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}/*# sourceMappingURL=footer.css.map */
