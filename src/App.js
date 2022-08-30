@@ -1,7 +1,11 @@
 import "./app.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
-import background_image from "./images/f1.jpg"
+import Driver from "./Components/Driver/Driver";
+import background_image from "./images/f1.jpg";
+import { drivers } from "./Services/DriverInfoService";
+import leclerc_image from "./images/drivers/leclerc.jpg"
+import sainz_image from "./images/drivers/sainz.jpg";
 
 function App() {
   return (
@@ -53,6 +57,13 @@ function App() {
             The team's 2022 drivers are <b>Charles Leclerc </b> and{" "}
             <b>Carlos Sainz Jr.</b>
           </p>
+        </section>
+        <section className="section-drivers" id="section-drivers">
+          <h2>Drivers</h2>
+          <div className="drivers">
+            <Driver image={leclerc_image} driver={drivers[0]} />
+            <Driver image={sainz_image} driver={drivers[1]} />
+          </div>
         </section>
       </div>
 

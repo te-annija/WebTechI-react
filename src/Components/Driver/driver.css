@@ -1,0 +1,48 @@
+.driver {
+  position: relative;
+}
+.driver img {
+  width: 100%;
+  min-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.driver__intro {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: rgba(24, 24, 24, 0.8);
+}
+.driver__intro button {
+  background-color: transparent;
+  border: none;
+  color: rgb(204, 47, 49);
+  font-size: 20px;
+  cursor: pointer;
+}
+.driver__intro button:hover {
+  color: white;
+}
+.driver__full_information {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  background-color: rgba(24, 24, 24, 0.8);
+  width: 100%;
+  height: 100%;
+}
+.driver__full_information button {
+  background-color: transparent;
+  border: none;
+  color: rgb(204, 47, 49);
+  font-size: 20px;
+  cursor: pointer;
+}
+.driver__full_information button:hover {
+  color: white;
+}/*# sourceMappingURL=driver.css.map */
