@@ -1,0 +1,33 @@
+.form p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 10px 30px 10px;
+}
+.form input {
+  font-size: 22px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid rgb(24, 24, 24);
+  border-radius: 9px;
+  padding: 5px;
+}
+.form input[type=submit] {
+  background-color: rgba(24, 24, 24, 0.8);
+  width: 200px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.form input[type=submit]:hover {
+  background-color: rgb(24, 24, 24);
+}
+.form__error {
+  color: yellow;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  .form p {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=form.css.map */

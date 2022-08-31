@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Driver from "./Components/Driver/Driver";
+import Form from "./Components/Form/Form";
 import background_image from "./images/f1.jpg";
 import { drivers } from "./Services/DriverInfoService";
 import { races } from "./Services/RaceInfoService";
@@ -95,6 +96,10 @@ function App() {
               <img src={races[hoverRaceMap].map} />
             </div>
           </div>
+        </section>
+        <section className="section-form" id="section-form">
+          <h2>Leave your prediction!</h2>
+          <Form />
         </section>
       </div>
 
