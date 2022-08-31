@@ -1,13 +1,33 @@
 import "./app.css";
+import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Driver from "./Components/Driver/Driver";
 import background_image from "./images/f1.jpg";
 import { drivers } from "./Services/DriverInfoService";
+import { races } from "./Services/RaceInfoService";
 import leclerc_image from "./images/drivers/leclerc.jpg"
 import sainz_image from "./images/drivers/sainz.jpg";
 
 function App() {
+  const [currentRaceMap, setCurrentRaceMap] = React.useState(0);
+  const [hoverRaceMap, setHoverRaceMap] = React.useState(0); 
+  const displayRaces = races.map((race, index) => {
+    return (
+      <li
+        id={index}
+        key={index}
+        onClick={() => setCurrentRaceMap(index)}
+        onMouseEnter={() => setHoverRaceMap(index)}
+        onMouseLeave={() => setHoverRaceMap(currentRaceMap)}
+        style={{ color: hoverRaceMap === index ? "yellow" : "white" }}
+      >
+        {race.place} Grand Prix
+      </li>
+    );
+  })
+
+
   return (
     <div className="app">
       <header
@@ -63,6 +83,17 @@ function App() {
           <div className="drivers">
             <Driver image={leclerc_image} driver={drivers[0]} />
             <Driver image={sainz_image} driver={drivers[1]} />
+          </div>
+        </section>
+        <section className="section-races" id="section-races">
+          <h2> Races 2022</h2>
+          <div className="races">
+            <ol className="races__titles">{displayRaces}</ol>
+            <div className="races__maps">
+              <h3>{races[hoverRaceMap].place} Grand Prix </h3>
+              <h3>Date of the race: {races[hoverRaceMap].date}</h3>
+              <img src={races[hoverRaceMap].map} />
+            </div>
           </div>
         </section>
       </div>

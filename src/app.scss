@@ -61,11 +61,46 @@
     justify-content: space-between;
 
   }
+
+  .races {
+    display: flex;
+    justify-content: space-between;
+
+    ol {
+      list-style-position: inside;
+
+      li {
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover {
+          color: yellow;
+        }
+      }
+    }
+
+    &__maps {
+      width: 70%;
+
+      h3 {
+        text-align: center;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
   .drivers {
     flex-direction: column;
+  }
+
+  .races {
+    flex-direction: column;
+
+    &__maps {
+      order: -1;
+      align-self: center;
+    }
   }
 }
 
@@ -106,6 +141,11 @@
       padding: 0;
       padding-bottom: 40px;
     }
-  }
 
+    .races {
+      &__maps {
+        width: 100%;
+      }
+    }
+  }
 }
